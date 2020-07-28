@@ -13,6 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('/books', 'BookController@store');
+Route::patch('/books/{book}-{slug}', 'BookController@update');
+Route::delete('/books/{book}-{slug}', 'BookController@destroy');
+
+Route::post('/author', 'AuthorController@store');
+
 Route::get('/', function () {
     return view('welcome');
 });
