@@ -19,6 +19,8 @@ Route::delete('/books/{book}-{slug}', 'BookController@destroy');
 
 Route::post('/author', 'AuthorController@store');
 
+Route::post('/checkout/{book}', 'CheckoutBookController@store');
+
 Route::get('/', function () {
     return view('welcome');
 });

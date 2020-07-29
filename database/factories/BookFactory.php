@@ -9,6 +9,6 @@ use Faker\Generator as Faker;
 $factory->define(Book::class, function (Faker $faker) {
     return [
         'title'     => $faker->sentence(),
-        'author'    => factory(Author::class),
+        'author_id'    => $faker->name,
     ];
 });
